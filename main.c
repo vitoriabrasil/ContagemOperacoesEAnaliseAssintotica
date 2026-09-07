@@ -23,13 +23,11 @@ void buscaBinariaRecursiva(int vetor[], int L, int R, int s);
 
 int main() {
 
-    
-
     printf("Entre com o tamanho do vetor: \n");
     // Declaração de Variáveis e entrada do tamanho do vetor.
     int n;
     scanf("%d", &n);
-    int V[n];
+    int *V = malloc (n * sizeof(int));
     
     printf("Entre com o vetor: \n");
     // Preenchimento do vetor
@@ -62,7 +60,8 @@ int main() {
             for(int i = 0; i < n; i++){
                 printf("%d", vetorInvertido[i]);
             }
-             printf("\n");
+            printf("\n");
+            free(vetorInvertido);
 
         } else if(opcao == 2){
             int s = 0;
@@ -85,12 +84,8 @@ int main() {
 
     } while(opcao != 5);
 
-
-
-    
-   
+    free(V);
     return 0;
-
 }
 
 int *inversao(int vetor[], int n){
@@ -163,13 +158,12 @@ void buscaBinaria(int vetor[], int n, int s){
 }
 
 void buscaBinariaRecursiva(int vetor[], int L, int R,int s){
-
-    int meio = L + (R - L) / 2;
-
     if(L > R) {
         printf("\nNÃO.\n");
         return;
     }
+
+    int meio = L + (R - L) / 2;
 
     if(vetor[meio] == s){
         printf("\nSIM.\n");
@@ -180,6 +174,4 @@ void buscaBinariaRecursiva(int vetor[], int L, int R,int s){
         return buscaBinariaRecursiva(vetor, L, meio-1, s);
     } 
         return buscaBinariaRecursiva(vetor, meio+1, R, s);
-
-
 }
