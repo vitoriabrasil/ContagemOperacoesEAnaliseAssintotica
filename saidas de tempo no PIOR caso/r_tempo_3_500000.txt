@@ -1,0 +1,1 @@
+busca_binairia_iterativa, 500000, 0.000000124

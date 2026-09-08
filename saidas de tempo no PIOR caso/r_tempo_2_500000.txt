@@ -1,0 +1,1 @@
+busca_sequencial, 500000, 0.001350961
