@@ -58,7 +58,7 @@ int main() {
             int *vetorInvertido = inversao(V, n);
             printf("Vetor invertido: \n");
             for(int i = 0; i < n; i++){
-                printf("%d", vetorInvertido[i]);
+                printf("%d ", vetorInvertido[i]);
             }
             printf("\n");
             free(vetorInvertido);
@@ -113,13 +113,13 @@ void buscaSequencial(int vetor[], int n, int s){
     for(int i = 0; i < n; i++){
         if(vetor[i] == s){
             // Função encerrada, caso valor seja encontrado
-            printf("\nSIM. \n");
+            printf("\nSIM\n");
             return;
         }
     } 
 
     // Como função ainda não foi encerrada, o valor não está no vetor
-    printf("\nNÃO.\n");
+    printf("\nNAO\n");
     return ;
 }
 
@@ -136,7 +136,7 @@ void buscaBinaria(int vetor[], int n, int s){
 
         if(vetor[meio] == s){
             // Caso a posição cotenha o valor procurado, ela é encerrada
-            printf("\nSIM. \n");
+            printf("\nSIM\n");
             return;
         }
 
@@ -153,20 +153,20 @@ void buscaBinaria(int vetor[], int n, int s){
 
     }
 
-    printf("\nNÃO.\n");
+    printf("\nNAO\n");
     return;
 }
 
 void buscaBinariaRecursiva(int vetor[], int L, int R,int s){
     if(L > R) {
-        printf("\nNÃO.\n");
+        printf("\nNAO\n");
         return;
     }
 
     int meio = L + (R - L) / 2;
 
     if(vetor[meio] == s){
-        printf("\nSIM.\n");
+        printf("\nSIM\n");
         return;
     }
 

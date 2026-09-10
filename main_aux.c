@@ -149,7 +149,7 @@ void buscaSequencial(int vetor[], int n, int s){
         comparacao++;                                           //comp. para vetor[i] == s
         if(vetor[i] == s){
             // Função encerrada, caso valor seja encontrado
-            printf("\nSIM \n");
+            printf("\nSIM\n");
             return;
         }
 
@@ -158,7 +158,7 @@ void buscaSequencial(int vetor[], int n, int s){
     comparacao++;                                                   //comp. da quebra de laco
 
     // Como função ainda não foi encerrada, o valor não está no vetor
-    printf("\nNAO \n");
+    printf("\nNAO\n");
     return ;
 }
 
@@ -185,7 +185,7 @@ void buscaBinaria(int vetor[], int n, int s){
         comparacao++;                                                   //comp. para vetor[meio] == s
         if(vetor[meio] == s){
             // Caso a posição cotenha o valor procurado, ela é encerrada
-            printf("\nSIM \n");
+            printf("\nSIM\n");
             return;
         }
 
@@ -206,7 +206,7 @@ void buscaBinaria(int vetor[], int n, int s){
     }
     comparacao++;                                                          //comp. da quebra de laco
 
-    printf("\nNAO \n");
+    printf("\nNAO\n");
     return;
 }
 
@@ -214,7 +214,7 @@ void buscaBinariaRecursiva(int vetor[], int L, int R,int s){
 
     comparacao++;                                                    //comp. L > R 
     if(L > R) {
-        printf("\nNAO \n");
+        printf("\nNAO\n");
         return;
     }
 
@@ -223,7 +223,7 @@ void buscaBinariaRecursiva(int vetor[], int L, int R,int s){
 
     comparacao++;                                                    //comp. para vetor[meio] == s
     if(vetor[meio] == s){
-        printf("\nSIM \n");
+        printf("\nSIM\n");
         return;
     }
 
