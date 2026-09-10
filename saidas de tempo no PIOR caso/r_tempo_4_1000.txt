@@ -1,0 +1,1 @@
+busca_binairia_recursiva, 1000, 0.000000102
